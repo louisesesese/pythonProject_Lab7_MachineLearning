@@ -16,8 +16,6 @@ labels = data.iloc[:, 4].to_numpy()
 
 encoder = preprocessing.LabelEncoder()
 encoded_labels = encoder.fit_transform(labels)
-
-# split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(features, encoded_labels, test_size=0.5)
 
 # 1. calculate number of misclassified observations
